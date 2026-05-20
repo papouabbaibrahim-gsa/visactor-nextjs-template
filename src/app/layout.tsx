@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Gabarito } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SideNav } from "@/components/nav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -27,6 +28,7 @@ export default function RootLayout({
             <div className="flex-grow overflow-auto">{children}</div>
           </div>
         </Providers>
+        <SpeedInsights />
       </body>
     </html>
   );
